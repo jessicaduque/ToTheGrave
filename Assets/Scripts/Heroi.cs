@@ -8,13 +8,13 @@ public class Heroi : MonoBehaviour
     private Rigidbody2D Corpo;
     private Animator Anim;
     public GameObject MeuAtk;
-    public int qtdpulos = 2;
+    public int qtdpulos = 1;
     public GameObject AtaqueDisparo;
     public GameObject PontoDeSaida;
     private string lado = "Direita";
     private int HP = 10;
     public Slider MinhaBarraDeVida;
-    private int moedas;
+    private int caveiras;
     public int vidas = 3;
 
     // Start is called before the first frame update
@@ -57,11 +57,11 @@ public class Heroi : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Anim.SetTrigger("Ataque");
+            Anim.SetTrigger("Ataque1");
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Anim.SetTrigger("AtaqueL");
+            Anim.SetTrigger("Ataque2");
         }
 
 
@@ -79,8 +79,6 @@ public class Heroi : MonoBehaviour
         }
 
     }
-
-
 
     void Pular()
     {
@@ -109,7 +107,7 @@ public class Heroi : MonoBehaviour
     {
         if (colidiu.gameObject.tag == "Chao")
         {
-            qtdpulos = 2;
+            qtdpulos = 1;
         }
         if (colidiu.gameObject.tag == "AtaqueInimigo")
         {
@@ -117,10 +115,10 @@ public class Heroi : MonoBehaviour
 
             Anim.SetTrigger("Dano");
         }
-        if (colidiu.gameObject.tag == "Moeda")
+        if (colidiu.gameObject.tag == "Caveira")
         {
-            moedas++;
-            GameObject.FindGameObjectWithTag("SomMoeda").GetComponent<AudioSource>().Play();
+            caveiras++;
+            GameObject.FindGameObjectWithTag("SomCaveira").GetComponent<AudioSource>().Play();
             Destroy(colidiu.gameObject);
         }
         if (colidiu.gameObject.tag == "Morte")
@@ -142,9 +140,9 @@ public class Heroi : MonoBehaviour
     }
 
     //Função
-    public int ValorMoedas()
+    public int ValorCaveiras()
     {
-        return moedas;
+        return caveiras;
     }
 
     public void ChamarGameOver()

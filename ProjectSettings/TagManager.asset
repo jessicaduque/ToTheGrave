@@ -9,10 +9,10 @@ TagManager:
   - Chao
   - Exemplo
   - AtaqueInimigo
-  - Moeda
-  - SomMoeda
   - CheckPoint
   - Morte
+  - Caveira
+  - SomCaveira
   layers:
   - Default
   - TransparentFX

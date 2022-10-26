@@ -18,6 +18,6 @@ public class MostrarMoedas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MeuTexto.text = MeuHeroi.ValorMoedas().ToString();
+        MeuTexto.text = MeuHeroi.ValorCaveiras().ToString();
     }
 }
