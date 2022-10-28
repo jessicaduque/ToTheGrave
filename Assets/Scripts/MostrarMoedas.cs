@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class MostrarMoedas : MonoBehaviour
 {
-    private Heroi MeuHeroi;
+    private Protagonista MeuHeroi;
     private Text MeuTexto;
 
     // Start is called before the first frame update
     void Start()
     {
-        MeuHeroi = GameObject.FindGameObjectWithTag("Player").GetComponent<Heroi>();
+        MeuHeroi = GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>();
         MeuTexto = GetComponent<Text>();
     }
 

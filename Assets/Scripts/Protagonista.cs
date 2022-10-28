@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Heroi : MonoBehaviour
+public class Protagonista : MonoBehaviour
 {
     private Rigidbody2D Corpo;
     private Animator Anim;
@@ -17,6 +17,9 @@ public class Heroi : MonoBehaviour
     private int caveiras;
     public int vidas = 3;
 
+    // Transformação
+    private bool morcego = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,21 +30,20 @@ public class Heroi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        //Movimento
-        float velX = Input.GetAxis("Horizontal")*4;
+
+        float velX = Input.GetAxis("Horizontal") * 4;
         float minhaG = Corpo.velocity.y;
-        
+
         Corpo.velocity = new Vector2(velX, minhaG);
 
-        if(velX == 0)
+        if (velX == 0)
         {
             Anim.SetBool("Andar", false);
         }
         else
         {
             Anim.SetBool("Andar", true);
-            if(velX < 0)
+            if (velX < 0)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
                 lado = "Esquerda";
@@ -55,34 +57,45 @@ public class Heroi : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (morcego)
         {
-            Anim.SetTrigger("Ataque1");
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Anim.SetTrigger("Ataque2");
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           if(qtdpulos > 0)
+            if (Input.GetKey(KeyCode.W))
             {
-                qtdpulos--;
-                Pular();
-            }
                 
-
-           
-            
+            }
         }
+        else
+        {
 
+            if (Input.GetMouseButtonDown(0))
+            {
+                Anim.SetTrigger("Ataque1");
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                Anim.SetTrigger("Ataque2");
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                if (qtdpulos > 0)
+                {
+                    qtdpulos--;
+                    Pular();
+                }
+            }
+
+        }
     }
-
     void Pular()
     {
-        Corpo.AddForce(Vector2.up * 330);
+        Corpo.AddForce(Vector2.up * 460);
+    }
+
+    void Transformacao()
+    {
+        //GetComponent<Protagonista_Morcego>()
     }
 
     public void Disparo()
@@ -134,7 +147,7 @@ public class Heroi : MonoBehaviour
         MinhaBarraDeVida.value = HP;
         if (HP <= 0)
         {
-            
+
             Anim.SetBool("Morto", true);
         }
     }
@@ -161,8 +174,8 @@ public class Heroi : MonoBehaviour
     //Esse metodo precisa de um parametro
     public void NovaChance(Vector3 checkPosition)
     {
-        HP = 10;
-        qtdpulos = 2;
+        HP = 6;
+        qtdpulos = 1;
         Anim.SetBool("Morto", false);
         Anim.SetTrigger("Reviver");
         transform.position = checkPosition;

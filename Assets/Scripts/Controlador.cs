@@ -34,10 +34,10 @@ public class Controlador : MonoBehaviour
     {
         
         //perguntando para o heroi
-        int qtdVidas = MeuHeroi.GetComponent<Heroi>().MinhasVidas();
+        int qtdVidas = MeuHeroi.GetComponent<Protagonista>().MinhasVidas();
         if(qtdVidas > 0)
         {
-            MeuHeroi.GetComponent<Heroi>().NovaChance(Checkpoint.transform.position);
+            MeuHeroi.GetComponent<Protagonista>().NovaChance(Checkpoint.transform.position);
         }else
         {
             GameOver.SetActive(true);
