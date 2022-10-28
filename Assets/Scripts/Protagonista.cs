@@ -30,43 +30,20 @@ public class Protagonista : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Movimento();
 
-        float velX = Input.GetAxis("Horizontal") * 4;
-        float minhaG = Corpo.velocity.y;
-
-        Corpo.velocity = new Vector2(velX, minhaG);
-
-        if (velX == 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Anim.SetBool("Andar", false);
+            morcego = true;
+
         }
-        else
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            Anim.SetBool("Andar", true);
-            if (velX < 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-                lado = "Esquerda";
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-                lado = "Direita";
-
-
-            }
+            morcego = false;
         }
 
-        if (morcego)
+        if (morcego == false)
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-                
-            }
-        }
-        else
-        {
-
             if (Input.GetMouseButtonDown(0))
             {
                 Anim.SetTrigger("Ataque1");
@@ -75,8 +52,49 @@ public class Protagonista : MonoBehaviour
             {
                 Anim.SetTrigger("Ataque2");
             }
+        }
+    }
 
+    void Movimento()
+    {
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            Anim.SetBool("Andar", true);
+        }
+        else
+        {
+            Anim.SetBool("Andar", false);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.position = new Vector3(transform.position.x - 0.01f, transform.position.y, transform.position.z);
+            transform.localScale = new Vector3(-1, 1, 1);
+            lado = "Esquerda";
+        }
+        else if (Input.GetKey(KeyCode.D)) 
+        { 
+        
+            transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
+            transform.localScale = new Vector3(1, 1, 1);
+            lado = "Direita";
+        }
 
+        if (morcego)
+        {
+            qtdpulos = 0;
+            Corpo.gravityScale = 0;
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + 0.01f, transform.position.z);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y - 0.01f, transform.position.z);
+            }
+        }
+        else
+        {
+            Corpo.gravityScale = 1;
             if (Input.GetKeyDown(KeyCode.W))
             {
                 if (qtdpulos > 0)
@@ -85,7 +103,6 @@ public class Protagonista : MonoBehaviour
                     Pular();
                 }
             }
-
         }
     }
     void Pular()
@@ -176,6 +193,7 @@ public class Protagonista : MonoBehaviour
     {
         HP = 6;
         qtdpulos = 1;
+        morcego = false;
         Anim.SetBool("Morto", false);
         Anim.SetTrigger("Reviver");
         transform.position = checkPosition;
