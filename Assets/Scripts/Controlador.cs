@@ -8,6 +8,8 @@ public class Controlador : MonoBehaviour
     public GameObject GameOver;
     public GameObject Checkpoint;
     public GameObject MeuHeroi;
+    public int qtdInimigosMortos = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,6 @@ public class Controlador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void IniciarJogo()
@@ -30,7 +31,7 @@ public class Controlador : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void Morreu()
+    public void ProtagonistaMorreu()
     {
         
         //perguntando para o heroi
@@ -44,4 +45,10 @@ public class Controlador : MonoBehaviour
         }
         
     }
+
+    public void InimigoMorreu()
+    {
+        qtdInimigosMortos++;
+    }
+    
 }

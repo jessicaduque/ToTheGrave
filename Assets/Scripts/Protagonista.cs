@@ -11,11 +11,13 @@ public class Protagonista : MonoBehaviour
     public int qtdpulos = 1;
     public GameObject AtaqueDisparo;
     public GameObject PontoDeSaida;
+    public GameObject Portao;
     private string lado = "Direita";
     private int HP = 10;
     public Slider MinhaBarraDeVida;
     private int caveiras;
     public int vidas = 3;
+    public Text apertarE;
 
     // Transformação
     private bool morcego = false;
@@ -155,6 +157,14 @@ public class Protagonista : MonoBehaviour
         {
             ChamarGameOver();
         }
+        if (colidiu.gameObject.tag == "Portao")
+        {
+            apertarE.gameObject.SetActive(true);
+        }
+        else
+        {
+            apertarE.gameObject.SetActive(false);
+        }
     }
 
 
@@ -178,7 +188,7 @@ public class Protagonista : MonoBehaviour
     public void ChamarGameOver()
     {
         vidas--;
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().Morreu();
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().ProtagonistaMorreu();
     }
 
     //Informa Quantidade de Vidas
@@ -199,4 +209,10 @@ public class Protagonista : MonoBehaviour
         transform.position = checkPosition;
 
     }
+
+    public void AcessarPortao()
+    {
+
+    }
+
 }

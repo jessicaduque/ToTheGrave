@@ -13,6 +13,8 @@ TagManager:
   - Morte
   - Caveira
   - SomCaveira
+  - Moeda
+  - Portao
   layers:
   - Default
   - TransparentFX

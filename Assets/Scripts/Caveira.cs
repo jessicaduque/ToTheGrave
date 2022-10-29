@@ -26,9 +26,6 @@ public class Caveira : MonoBehaviour
 
     void Update()
     {
-        
-            
-        
         if(morreu == true)
         {
             GetComponent<Collider2D>().enabled = false;
@@ -107,8 +104,8 @@ public class Caveira : MonoBehaviour
 
     public void Morrer()
     {   
-        
         Corpo.velocity = new Vector2(0, 0);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         morreu = true;
         
     }
