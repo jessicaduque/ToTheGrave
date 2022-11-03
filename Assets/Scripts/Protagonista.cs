@@ -18,9 +18,8 @@ public class Protagonista : MonoBehaviour
     private int caveiras;
     public int vidas = 3;
     private float vel;
-
-    // Transformação
     private bool morcego = false;
+    private int contTempo = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +31,7 @@ public class Protagonista : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        contTempo++;
         Movimento();
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -47,13 +47,16 @@ public class Protagonista : MonoBehaviour
 
         if (morcego == false)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (contTempo > 10)
             {
-                Anim.SetTrigger("Ataque1");
-            }
-            if (Input.GetMouseButtonDown(1))
-            {
-                Anim.SetTrigger("Ataque2");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Anim.SetTrigger("Ataque1");
+                }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    Anim.SetTrigger("Ataque2");
+                }
             }
         }
     }
@@ -113,11 +116,6 @@ public class Protagonista : MonoBehaviour
     void Pular()
     {
         Corpo.AddForce(Vector2.up * 460);
-    }
-
-    void Transformacao()
-    {
-        //GetComponent<Protagonista_Morcego>()
     }
 
     public void Disparo()
