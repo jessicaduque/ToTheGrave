@@ -36,6 +36,7 @@ public class Protagonista : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Corpo.velocity = new Vector2(0.0f, 0.0f);
             morcego = true;
 
         }
