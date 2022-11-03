@@ -17,7 +17,7 @@ public class Protagonista : MonoBehaviour
     public Slider MinhaBarraDeVida;
     private int caveiras;
     public int vidas = 3;
-    public Text apertarE;
+    private float vel;
 
     // Transformação
     private bool morcego = false;
@@ -70,33 +70,35 @@ public class Protagonista : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position = new Vector3(transform.position.x - 0.01f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - vel, transform.position.y, transform.position.z);
             transform.localScale = new Vector3(-1, 1, 1);
             lado = "Esquerda";
         }
         else if (Input.GetKey(KeyCode.D)) 
         { 
         
-            transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + vel, transform.position.y, transform.position.z);
             transform.localScale = new Vector3(1, 1, 1);
             lado = "Direita";
         }
 
         if (morcego)
         {
+            vel = 0.016f;
             qtdpulos = 0;
             Corpo.gravityScale = 0;
             if (Input.GetKey(KeyCode.W))
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y + 0.01f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y + vel, transform.position.z);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y - 0.01f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y - vel, transform.position.z);
             }
         }
         else
         {
+            vel = 0.01f;
             Corpo.gravityScale = 1;
             if (Input.GetKeyDown(KeyCode.W))
             {
@@ -158,14 +160,6 @@ public class Protagonista : MonoBehaviour
         {
             ChamarGameOver();
         }
-        if (colidiu.gameObject.tag == "Portao")
-        {
-            apertarE.gameObject.SetActive(true);
-        }
-        else
-        {
-            apertarE.gameObject.SetActive(false);
-        }
     }
 
 
@@ -208,11 +202,6 @@ public class Protagonista : MonoBehaviour
         Anim.SetBool("Morto", false);
         Anim.SetTrigger("Reviver");
         transform.position = checkPosition;
-
-    }
-
-    public void AcessarPortao()
-    {
 
     }
 

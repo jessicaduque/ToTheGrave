@@ -50,5 +50,17 @@ public class Controlador : MonoBehaviour
     {
         qtdInimigosMortos++;
     }
+
+    public bool CheckInimigosMortos()
+    {
+        if(qtdInimigosMortos == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
 }
