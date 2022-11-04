@@ -31,7 +31,9 @@ public class Protagonista : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        contTempo++;
+        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().ComecouJogo()) {
+            contTempo++; 
+        }
         Movimento();
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -47,7 +49,7 @@ public class Protagonista : MonoBehaviour
 
         if (morcego == false)
         {
-            if (contTempo > 10)
+            if (contTempo > 5)
             {
                 if (Input.GetMouseButtonDown(0))
                 {

@@ -42,15 +42,4 @@ public class AtkLanca : MonoBehaviour
         transform.position = new Vector3(transform.position.x + velocidade, transform.position.y, transform.position.z);
     }
 
-
-    private void OnTriggerEnter2D(Collider2D colidiu)
-    {
-        if (colidiu.gameObject.tag == "Inimigo")
-        {
-            //Destroy(colidiu.gameObject);
-            //Destroy(this.gameObject);
-        }
-
-    }
-
 }

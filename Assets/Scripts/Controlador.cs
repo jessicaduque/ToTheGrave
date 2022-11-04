@@ -9,6 +9,7 @@ public class Controlador : MonoBehaviour
     public GameObject Checkpoint;
     public GameObject MeuHeroi;
     public int qtdInimigosMortos = 0;
+    private bool comecouJogo = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Controlador : MonoBehaviour
     public void IniciarJogo()
     {
         Time.timeScale = 1;
+        comecouJogo = true;
     }
 
     public void ReiniciarJogo()
@@ -61,6 +63,11 @@ public class Controlador : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public bool ComecouJogo()
+    {
+        return comecouJogo;
     }
     
 }

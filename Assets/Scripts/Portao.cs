@@ -11,6 +11,7 @@ public class Portao : MonoBehaviour
     public GameObject barreira;
     private Collider2D col;
     public Text apertarE;
+    public Text mortesInsuficientes;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class Portao : MonoBehaviour
         if (colidiu.gameObject.tag == "Player")
         {
             apertarE.gameObject.SetActive(false);
+            mortesInsuficientes.gameObject.SetActive(false);
         }
     }
 
@@ -61,7 +63,8 @@ public class Portao : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("SEM MORTES SUFICIENTES");
+                    apertarE.gameObject.SetActive(false);
+                    mortesInsuficientes.gameObject.SetActive(true);
                 }
             }
         }
