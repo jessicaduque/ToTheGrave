@@ -15,11 +15,13 @@ public class Protagonista : MonoBehaviour
     private string lado = "Direita";
     private int HP = 10;
     public Slider MinhaBarraDeVida;
+    public Slider MinhaBarraDeTransformacao;
     private int caveiras;
     public int vidas = 3;
     private float vel;
     private bool morcego = false;
     private int contTempo = 0;
+    public int tempoTransformacao;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class Protagonista : MonoBehaviour
         {
             Corpo.velocity = new Vector2(0.0f, 0.0f);
             morcego = true;
+            tempoTransformacao = 3000;
 
         }
         if (Input.GetKeyDown(KeyCode.T))
@@ -60,6 +63,10 @@ public class Protagonista : MonoBehaviour
                     Anim.SetTrigger("Ataque2");
                 }
             }
+        }
+        else
+        {
+            DiminuiTransformacao();
         }
     }
 
@@ -169,8 +176,17 @@ public class Protagonista : MonoBehaviour
         MinhaBarraDeVida.value = HP;
         if (HP <= 0)
         {
-
             Anim.SetBool("Morto", true);
+        }
+    }
+
+    public void DiminuiTransformacao()
+    {
+        tempoTransformacao--;
+        MinhaBarraDeTransformacao.value = tempoTransformacao;
+        if(tempoTransformacao == 0)
+        {
+            morcego = false;
         }
     }
 

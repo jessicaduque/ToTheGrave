@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AtkLanca : MonoBehaviour
 {
-    private string direcao = "";
     private float velocidade = 0.1f;
     private SpriteRenderer Sp;
     // Start is called before the first frame update
@@ -23,14 +22,12 @@ public class AtkLanca : MonoBehaviour
     {
         if(ladoEscolhido == "Esquerda")
         {
-            direcao = "Esquerda";
             velocidade = -0.1f;
             Sp = GetComponent<SpriteRenderer>();
             Sp.flipX = true;
         }
         if(ladoEscolhido == "Direita")
         {
-            direcao = "Direita";
             velocidade = 0.1f;
             Sp = GetComponent<SpriteRenderer>();
             Sp.flipX = false;
