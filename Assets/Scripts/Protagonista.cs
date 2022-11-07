@@ -11,7 +11,6 @@ public class Protagonista : MonoBehaviour
     public int qtdpulos = 1;
     public GameObject AtaqueDisparo;
     public GameObject PontoDeSaida;
-    public GameObject Portao;
     private string lado = "Direita";
     private int HP = 10;
     public Slider MinhaBarraDeVida;
@@ -21,14 +20,13 @@ public class Protagonista : MonoBehaviour
     private float vel;
     private bool morcego = false;
     private int contTempo = 0;
-    public int tempoTransformacao;
+    private int tempoTransformacao = 3000;
 
     // Start is called before the first frame update
     void Start()
     {
         Corpo = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
-        tempoTransformacao = 3000;
     }
 
     // Update is called once per frame

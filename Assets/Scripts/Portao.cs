@@ -12,6 +12,7 @@ public class Portao : MonoBehaviour
     private Collider2D col;
     public Text apertarE;
     public Text mortesInsuficientes;
+    public bool inPortao = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,37 +24,7 @@ public class Portao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-
-    public void AbrirPortao()
-    {
-        barreira.SetActive(false);
-        mostradorPortao.sprite = imgPortaoAberto;
-        col.enabled = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D colidiu)
-    {
-        if (colidiu.gameObject.tag == "Player")
-        {
-            apertarE.gameObject.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D colidiu)
-    {
-        if (colidiu.gameObject.tag == "Player")
-        {
-            apertarE.gameObject.SetActive(false);
-            mortesInsuficientes.gameObject.SetActive(false);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D colidiu)
-    {
-        if (colidiu.gameObject.tag == "Player")
+        if (inPortao)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -68,5 +39,36 @@ public class Portao : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            apertarE.gameObject.SetActive(false);
+            mortesInsuficientes.gameObject.SetActive(false);
+        }
     }
+
+
+    public void AbrirPortao()
+    {
+        barreira.SetActive(false);
+        mostradorPortao.sprite = imgPortaoAberto;
+        col.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "Player")
+        {
+            inPortao = true;
+            apertarE.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "Player")
+        {
+            inPortao = false;
+        }
+    }
+   
 }

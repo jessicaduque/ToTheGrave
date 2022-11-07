@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6e408857236b7b4392dd255f9d8de2d
+guid: 8b5f7d26ee58e0549a0a44c6a4f8f4c1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barra Vida-02_0
+      name: Barra Transformacao-02_0
       rect:
         serializedVersion: 2
-        x: 386
-        y: 524
-        width: 1123
-        height: 82
+        x: 398
+        y: 498
+        width: 1124
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5228837a95da8014ab26095371c36459
-      internalID: -1941511699
+      spriteID: ca0d3e4b01a4d1249a6af6521e98c241
+      internalID: -1492736656
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barra Vida-02_0: -1941511699
+      Barra Transformacao-02_0: -1492736656
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

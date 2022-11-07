@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6e408857236b7b4392dd255f9d8de2d
+guid: af736e2db2a067841afce1101b140ac8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barra Vida-02_0
+      name: "\xCDcones HUB_Prancheta 1_0"
       rect:
         serializedVersion: 2
-        x: 386
-        y: 524
-        width: 1123
-        height: 82
+        x: 743
+        y: 227
+        width: 539
+        height: 638
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5228837a95da8014ab26095371c36459
-      internalID: -1941511699
+      spriteID: a727fd0bfb1b50345b8cb604f00d3346
+      internalID: 214821731
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barra Vida-02_0: -1941511699
+      "\xCDcones HUB_Prancheta 1_0": 214821731
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

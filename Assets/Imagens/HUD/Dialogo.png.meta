@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6e408857236b7b4392dd255f9d8de2d
+guid: d7413afe7d4a57d4fb1dda50e072e8bf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barra Vida-02_0
+      name: Dialogo_0
       rect:
         serializedVersion: 2
-        x: 386
-        y: 524
-        width: 1123
-        height: 82
+        x: 0
+        y: 0
+        width: 1506
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5228837a95da8014ab26095371c36459
-      internalID: -1941511699
+      spriteID: 7104707cb16087f489f6340fb5f931a6
+      internalID: 1186166803
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barra Vida-02_0: -1941511699
+      Dialogo_0: 1186166803
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
