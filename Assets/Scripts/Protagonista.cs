@@ -28,6 +28,7 @@ public class Protagonista : MonoBehaviour
     {
         Corpo = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        tempoTransformacao = 3000;
     }
 
     // Update is called once per frame
@@ -41,8 +42,10 @@ public class Protagonista : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Corpo.velocity = new Vector2(0.0f, 0.0f);
-            morcego = true;
-            tempoTransformacao = 3000;
+            if (tempoTransformacao == 3000)
+            {
+                morcego = true;
+            }
 
         }
         if (Input.GetKeyDown(KeyCode.T))
@@ -63,6 +66,14 @@ public class Protagonista : MonoBehaviour
                     Anim.SetTrigger("Ataque2");
                 }
             }
+
+
+            if(tempoTransformacao < 3000)
+            {
+                tempoTransformacao++;
+                MinhaBarraDeTransformacao.value = tempoTransformacao;
+            }
+
         }
         else
         {
