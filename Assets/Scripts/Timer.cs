@@ -35,13 +35,14 @@ public class Timer : MonoBehaviour
                 {
                     acabouTempo = true;
                 }
-                else if (segundos == 0)
+                else if (segundos <= 0)
                 {
                     segundos = 59f;
                     minutos--;
                 }
 
                 segundos -= 1 * Time.deltaTime;
+
                 if (segundos < 10 && minutos < 10)
                 {
                     countdown.text = "0" + minutos.ToString() + ":0" + segundos.ToString("0");
