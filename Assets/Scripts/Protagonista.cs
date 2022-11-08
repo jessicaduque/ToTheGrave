@@ -8,7 +8,7 @@ public class Protagonista : MonoBehaviour
     private Rigidbody2D Corpo;
     private Animator Anim;
     public GameObject MeuAtk;
-    public int qtdpulos = 1;
+    private int qtdpulos = 1;
     public GameObject AtaqueDisparo;
     public GameObject PontoDeSaida;
     private string lado = "Direita";
@@ -16,7 +16,7 @@ public class Protagonista : MonoBehaviour
     public Slider MinhaBarraDeVida;
     public Slider MinhaBarraDeTransformacao;
     private int caveiras;
-    public int vidas = 3;
+    private int vidas = 3;
     private float vel;
     private bool morcego = false;
     private int contTempo = 0;
@@ -154,6 +154,14 @@ public class Protagonista : MonoBehaviour
         MeuAtk.SetActive(false);
     }
 
+    private void OnTriggerEnter2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "Morte")
+        {
+            ChamarGameOver();
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "Chao")
@@ -171,10 +179,6 @@ public class Protagonista : MonoBehaviour
             caveiras++;
             GameObject.FindGameObjectWithTag("SomCaveira").GetComponent<AudioSource>().Play();
             Destroy(colidiu.gameObject);
-        }
-        if (colidiu.gameObject.tag == "Morte")
-        {
-            ChamarGameOver();
         }
     }
 

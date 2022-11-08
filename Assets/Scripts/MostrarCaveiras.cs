@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MostrarMoedas : MonoBehaviour
+public class MostrarCaveiras : MonoBehaviour
 {
     private Protagonista MeuHeroi;
     private Text MeuTexto;
