@@ -154,20 +154,8 @@ public class Protagonista : MonoBehaviour
         MeuAtk.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D colidiu)
-    {
-        if (colidiu.gameObject.tag == "Morte")
-        {
-            ChamarGameOver();
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D colidiu)
     {
-        if (colidiu.gameObject.tag == "Chao")
-        {
-            qtdpulos = 1;
-        }
         if (colidiu.gameObject.tag == "AtaqueInimigo")
         {
             colidiu.gameObject.SetActive(false);
@@ -219,6 +207,11 @@ public class Protagonista : MonoBehaviour
     public int MinhasVidas()
     {
         return vidas;
+    }
+
+    public void DefinirPulos()
+    {
+        qtdpulos = 1;
     }
 
     //Revivo Meu Heroi;
