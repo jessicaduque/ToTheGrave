@@ -8,6 +8,7 @@ public class Controlador : MonoBehaviour
     public GameObject GameOver;
     public GameObject Checkpoint;
     public GameObject MeuHeroi;
+    public GameObject Boss;
     public int qtdInimigosMortos = 0;
     private bool comecouJogo = false;
 
@@ -20,6 +21,7 @@ public class Controlador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SpawnBoss();
     }
 
     public void IniciarJogo()
@@ -62,6 +64,14 @@ public class Controlador : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public void SpawnBoss()
+    {
+        if (CheckInimigosMortos())
+        {
+            Boss.SetActive(true);
         }
     }
 
