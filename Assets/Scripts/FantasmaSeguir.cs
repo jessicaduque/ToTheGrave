@@ -10,7 +10,7 @@ public class FantasmaSeguir : MonoBehaviour
     public float velX = 1;
     public float posInicial;
     public float posFinal;
-    private int vida = 3;
+    private int vida = 2;
     private bool morreu = false;
     private GameObject MeuHeroi;
     public GameObject AreaAtkInimigo;
@@ -49,6 +49,14 @@ public class FantasmaSeguir : MonoBehaviour
     void Mover()
     {
         Corpo.velocity = new Vector2(velX, 0);
+        if (velX != 0)
+        {
+            Anim.SetBool("Andando", true);
+        }
+        else
+        {
+            Anim.SetBool("Andando", false);
+        }
         if (transform.position.x < posInicial)
         {
             velX = 3;

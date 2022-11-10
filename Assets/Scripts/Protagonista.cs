@@ -21,6 +21,7 @@ public class Protagonista : MonoBehaviour
     private bool morcego = false;
     private int contTempo = 0;
     private int tempoTransformacao = 3000;
+    private int vidaPerdida;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,9 @@ public class Protagonista : MonoBehaviour
         }
         else
         {
+            GameObject.FindGameObjectWithTag("PeProtagonista")
+                .GetComponent<PeProtagonista>()
+                .NovaInicial();
             DiminuiTransformacao();
         }
     }
@@ -144,6 +148,11 @@ public class Protagonista : MonoBehaviour
     }
 
 
+    public bool EstadoProtagonista()
+    {
+        return morcego;
+    }
+
     public void AtivarATK()
     {
         MeuAtk.SetActive(true);
@@ -159,7 +168,7 @@ public class Protagonista : MonoBehaviour
         if (colidiu.gameObject.tag == "AtaqueInimigo")
         {
             colidiu.gameObject.SetActive(false);
-
+            vidaPerdida = 1;
             Anim.SetTrigger("Dano");
         }
         if (colidiu.gameObject.tag == "Caveira")
@@ -170,10 +179,15 @@ public class Protagonista : MonoBehaviour
         }
     }
 
+    public void PerderVidaQueda(float tamQueda)
+    {
+        vidaPerdida = Mathf.RoundToInt(tamQueda) / 15;
+        PerdeHP();
+    }
 
     public void PerdeHP()
     {
-        HP--;
+        HP -= vidaPerdida;
         MinhaBarraDeVida.value = HP;
         if (HP <= 0)
         {

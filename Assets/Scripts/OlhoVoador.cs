@@ -26,9 +26,6 @@ public class OlhoVoador : MonoBehaviour
 
     void Update()
     {
-
-
-
         if (morreu == true)
         {
             GetComponent<Collider2D>().enabled = false;
