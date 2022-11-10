@@ -15,6 +15,7 @@ TagManager:
   - SomCaveira
   - Moeda
   - Portao
+  - PeProtagonista
   layers:
   - Default
   - TransparentFX
