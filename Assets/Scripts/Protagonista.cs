@@ -21,13 +21,14 @@ public class Protagonista : MonoBehaviour
     private bool morcego = false;
     private int contTempo = 0;
     private int tempoTransformacao = 3000;
-    private int vidaPerdida;
+    private int vidaPerdida = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         Corpo = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        transform.position = new Vector3(-20.688f, -28.65f, 0);
     }
 
     // Update is called once per frame
@@ -181,8 +182,11 @@ public class Protagonista : MonoBehaviour
 
     public void PerderVidaQueda(float tamQueda)
     {
-        vidaPerdida = Mathf.RoundToInt(tamQueda) / 15;
-        PerdeHP();
+        if (contTempo > 10)
+        {
+            vidaPerdida = Mathf.RoundToInt(tamQueda) / 15;
+            Anim.SetTrigger("Dano");
+        }
     }
 
     public void PerdeHP()
@@ -204,8 +208,6 @@ public class Protagonista : MonoBehaviour
             morcego = false;
         }
     }
-
-    //Função
     public int ValorCaveiras()
     {
         return caveiras;
@@ -217,7 +219,6 @@ public class Protagonista : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().ProtagonistaMorreu();
     }
 
-    //Informa Quantidade de Vidas
     public int MinhasVidas()
     {
         return vidas;
