@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7200089807868846688
+--- !u!1 &491617025977362368
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7200089807868846717}
-  - component: {fileID: 7200089807868846690}
-  - component: {fileID: 7200089807868846691}
+  - component: {fileID: 491617025977362397}
+  - component: {fileID: 491617025977362370}
+  - component: {fileID: 491617025977362371}
   m_Layer: 9
   m_Name: Caveira
   m_TagString: Caveira
@@ -18,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7200089807868846717
+--- !u!4 &491617025977362397
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200089807868846688}
+  m_GameObject: {fileID: 491617025977362368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 22.15, y: -1.4446514, z: 0}
-  m_LocalScale: {x: 0.7708, y: 0.7708, z: 0.7708}
+  m_LocalScale: {x: 0.5708, y: 0.5708, z: 0.5708}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7200089807868846690
+--- !u!212 &491617025977362370
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200089807868846688}
+  m_GameObject: {fileID: 491617025977362368}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,24 +74,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 336c1e03bd25743488d6888242bf437b, type: 3}
+  m_Sprite: {fileID: 637164219, guid: 336c1e03bd25743488d6888242bf437b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1.3181819, y: 1.540909}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7200089807868846691
+--- !u!58 &491617025977362371
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7200089807868846688}
+  m_GameObject: {fileID: 491617025977362368}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
