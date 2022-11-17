@@ -166,6 +166,10 @@ public class Protagonista : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D colidiu)
     {
+        if (colidiu.gameObject.tag == "CheckPoint")
+        {
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().MudarCheckpoint();
+        }
         if (colidiu.gameObject.tag == "AtaqueInimigo")
         {
             colidiu.gameObject.SetActive(false);

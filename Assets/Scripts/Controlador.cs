@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Controlador : MonoBehaviour
 {
     public GameObject GameOver;
-    public GameObject Checkpoint;
+    private Vector3 Checkpoint;
     public GameObject MeuHeroi;
     public GameObject Boss;
     public int qtdInimigosMortos = 0;
@@ -16,6 +16,7 @@ public class Controlador : MonoBehaviour
     void Start()
     {
         Time.timeScale = 0;
+        Checkpoint = new Vector3(-20.688f, -28.65f, 0);
     }
 
     // Update is called once per frame
@@ -42,12 +43,17 @@ public class Controlador : MonoBehaviour
         int qtdVidas = MeuHeroi.GetComponent<Protagonista>().MinhasVidas();
         if(qtdVidas > 0)
         {
-            MeuHeroi.GetComponent<Protagonista>().NovaChance(Checkpoint.transform.position);
+            MeuHeroi.GetComponent<Protagonista>().NovaChance(Checkpoint);
         }else
         {
             GameOver.SetActive(true);
         }
         
+    }
+    
+    public void MudarCheckpoint()
+    {
+        Checkpoint = MeuHeroi.transform.position;
     }
 
     public void InimigoMorreu()
