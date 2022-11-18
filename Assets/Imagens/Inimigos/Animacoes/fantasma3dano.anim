@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fantasma5dano
+  m_Name: fantasma3dano
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1373353866, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
+      value: {fileID: -493966886, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
     - time: 0.083333336
-      value: {fileID: -791343214, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
+      value: {fileID: -427638129, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
     - time: 0.16666667
-      value: {fileID: -295112551, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
+      value: {fileID: 302002867, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
     - time: 0.25
-      value: {fileID: 1019244235, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
+      value: {fileID: 556171752, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1373353866, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
-    - {fileID: -791343214, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
-    - {fileID: -295112551, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
-    - {fileID: 1019244235, guid: 52c41eb3305eb0a4bb1a506a725b9667, type: 3}
+    - {fileID: -493966886, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
+    - {fileID: -427638129, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
+    - {fileID: 302002867, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
+    - {fileID: 556171752, guid: c076d647a10ebf34dabf04a3d319e4b0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

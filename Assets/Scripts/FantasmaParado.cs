@@ -8,7 +8,7 @@ public class FantasmaParado : MonoBehaviour
     private Rigidbody2D Corpo;
     private Animator Anim;
     public float velX = 1;
-    private int vida = 3;
+    public int vida = 3;
     private bool morreu = false;
     private GameObject MeuHeroi;
 
@@ -30,7 +30,7 @@ public class FantasmaParado : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D colidiu)
+    private void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "AtaqueHeroi")
         {
@@ -38,20 +38,6 @@ public class FantasmaParado : MonoBehaviour
             Anim.SetTrigger("Dano");
         }
 
-    }
-
-    void Ataque()
-    {
-        Corpo.velocity = new Vector2(0, 0);
-        Anim.SetTrigger("Ataque");
-        if (transform.position.x > MeuHeroi.transform.position.x)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
     }
 
     public void PerdeuHP()

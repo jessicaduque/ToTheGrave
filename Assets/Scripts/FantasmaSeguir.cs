@@ -10,7 +10,7 @@ public class FantasmaSeguir : MonoBehaviour
     public float velX = 1;
     public float posInicial;
     public float posFinal;
-    private int vida = 2;
+    public int vida = 3;
     private bool morreu = false;
     private GameObject MeuHeroi;
     public GameObject AreaAtkInimigo;
@@ -60,16 +60,16 @@ public class FantasmaSeguir : MonoBehaviour
         if (transform.position.x < posInicial)
         {
             velX = 3;
-            transform.localScale = new Vector3(0.8f, 0.8f, 1);
+            transform.localScale = new Vector3(0.6f, 0.6f, 1);
         }
         if (transform.position.x > posFinal)
         {
             velX = -3;
-            transform.localScale = new Vector3(-0.8f, 0.8f, 1);
+            transform.localScale = new Vector3(-0.6f, 0.6f, 1);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D colidiu)
+    private void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "AtaqueHeroi")
         {
@@ -85,11 +85,11 @@ public class FantasmaSeguir : MonoBehaviour
         Anim.SetTrigger("Ataque");
         if (transform.position.x > MeuHeroi.transform.position.x)
         {
-            transform.localScale = new Vector3(-0.8f, 0.8f, 1);
+            transform.localScale = new Vector3(-0.6f, 0.6f, 1);
         }
         else
         {
-            transform.localScale = new Vector3(0.8f, 0.8f, 1);
+            transform.localScale = new Vector3(0.6f, 0.6f, 1);
         }
     }
 
