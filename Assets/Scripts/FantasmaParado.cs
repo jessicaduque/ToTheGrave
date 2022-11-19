@@ -8,7 +8,7 @@ public class FantasmaParado : MonoBehaviour
     private Rigidbody2D Corpo;
     private Animator Anim;
     public float velX = 1;
-    public int vida = 3;
+    private int vida = 3;
     private bool morreu = false;
     private GameObject MeuHeroi;
 
@@ -51,6 +51,7 @@ public class FantasmaParado : MonoBehaviour
 
     public void Morrer()
     {
+        Corpo.velocity = new Vector2(0, 2);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         morreu = true;
 

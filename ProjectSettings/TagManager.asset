@@ -13,9 +13,9 @@ TagManager:
   - Morte
   - Caveira
   - SomCaveira
-  - Moeda
   - Portao
   - PeProtagonista
+  - Sangue
   layers:
   - Default
   - TransparentFX
@@ -26,7 +26,7 @@ TagManager:
   - Heroi
   - Ataques
   - Monstros
-  - Moedas
+  - Coletaveis
   - Chao
   - 
   - 

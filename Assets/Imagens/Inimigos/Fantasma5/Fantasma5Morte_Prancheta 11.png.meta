@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7413afe7d4a57d4fb1dda50e072e8bf
+guid: 19d970b3c94bc904d89ae80319781d33
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dialogo_0
+      name: Fantasma5Morte_Prancheta 11_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1506
-        height: 176
+        x: 203
+        y: 5046
+        width: 1349
+        height: 1714
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7104707cb16087f489f6340fb5f931a6
-      internalID: 1186166803
+      spriteID: 420868e40158ea14b825299d4a52da39
+      internalID: 1354372695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fantasma5Morte_Prancheta 11_1
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 5114
+        width: 1232
+        height: 1709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e34988ab1929f34fadf2900f550c1ca
+      internalID: -2010907838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fantasma5Morte_Prancheta 11_2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 2835
+        width: 1232
+        height: 1677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06aa523b7e8f404eb0b63a3db798dcf
+      internalID: 2133295929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fantasma5Morte_Prancheta 11_3
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 2935
+        width: 855
+        height: 1660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8255fce09ca13eb48b94dae1f27ea8c1
+      internalID: 1321176030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fantasma5Morte_Prancheta 11_4
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1033
+        width: 678
+        height: 1314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779a25833b28ba2468434f6392c689c9
+      internalID: -1214155025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fantasma5Morte_Prancheta 11_5
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1230
+        width: 681
+        height: 1131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989276e3f308aa44596cc0d3ba93fc27
+      internalID: -28628416
       vertices: []
       indices: 
       edges: []
@@ -135,7 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dialogo_0: 1186166803
+      Fantasma5Morte_Prancheta 11_2: 2133295929
+      Fantasma5Morte_Prancheta 11_0: 1354372695
+      Fantasma5Morte_Prancheta 11_3: 1321176030
+      Fantasma5Morte_Prancheta 11_4: -1214155025
+      Fantasma5Morte_Prancheta 11_1: -2010907838
+      Fantasma5Morte_Prancheta 11_5: -28628416
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

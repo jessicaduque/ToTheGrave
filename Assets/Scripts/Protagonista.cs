@@ -12,7 +12,7 @@ public class Protagonista : MonoBehaviour
     public GameObject AtaqueDisparo;
     public GameObject PontoDeSaida;
     private string lado = "Direita";
-    private int HP = 10;
+    public int HP = 10;
     public Slider MinhaBarraDeVida;
     public Slider MinhaBarraDeTransformacao;
     private int caveiras;
@@ -164,7 +164,7 @@ public class Protagonista : MonoBehaviour
         MeuAtk.SetActive(false);
     }
 
-    private void OnTriggerStay2D(Collider2D colidiu)
+    private void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "CheckPoint")
         {
@@ -180,6 +180,19 @@ public class Protagonista : MonoBehaviour
         {
             caveiras++;
             GameObject.FindGameObjectWithTag("SomCaveira").GetComponent<AudioSource>().Play();
+            Destroy(colidiu.gameObject);
+        }
+        if (colidiu.gameObject.tag == "Sangue")
+        {
+            if(HP > 4)
+            {
+                HP = 10;
+            }
+            else
+            {
+                HP += 6;
+            }
+            MinhaBarraDeVida.value = HP;
             Destroy(colidiu.gameObject);
         }
     }

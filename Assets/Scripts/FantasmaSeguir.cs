@@ -10,7 +10,7 @@ public class FantasmaSeguir : MonoBehaviour
     public float velX = 1;
     public float posInicial;
     public float posFinal;
-    public int vida = 3;
+    private int vida = 3;
     private bool morreu = false;
     private GameObject MeuHeroi;
     public GameObject AreaAtkInimigo;
@@ -104,7 +104,7 @@ public class FantasmaSeguir : MonoBehaviour
 
     public void Morrer()
     {
-        Corpo.velocity = new Vector2(0, 0);
+        Corpo.velocity = new Vector2(0, 2);
         GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         morreu = true;
 

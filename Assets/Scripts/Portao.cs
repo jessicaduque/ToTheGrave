@@ -12,6 +12,7 @@ public class Portao : MonoBehaviour
     private Collider2D col;
     public Text apertarE;
     public Text mortesInsuficientes;
+    public Image caixaDialogo;
     public bool inPortao = false;
 
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class Portao : MonoBehaviour
                 else
                 {
                     apertarE.gameObject.SetActive(false);
+                    caixaDialogo.gameObject.SetActive(true);
                     mortesInsuficientes.gameObject.SetActive(true);
                 }
             }
@@ -42,6 +44,7 @@ public class Portao : MonoBehaviour
         else
         {
             apertarE.gameObject.SetActive(false);
+            caixaDialogo.gameObject.SetActive(false);
             mortesInsuficientes.gameObject.SetActive(false);
         }
     }
