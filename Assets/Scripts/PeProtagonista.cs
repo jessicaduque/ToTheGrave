@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PeProtagonista : MonoBehaviour
 {
-    private bool estaNoChao;
     public float yInicial;
     public float yFinal;
     public float diferencaY;
@@ -30,7 +29,6 @@ public class PeProtagonista : MonoBehaviour
         if (colidiu.gameObject.tag == "Chao")
         {
             yFinal = transform.position.y;
-            estaNoChao = true;
             if(GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().EstadoProtagonista() == false)
             {
                 diferencaY = yInicial - yFinal;
@@ -44,7 +42,6 @@ public class PeProtagonista : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D colidiu)
     {
-        estaNoChao = false;
         yInicial = transform.position.y;
     }
 
