@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour
     private bool morreu = false;
     private GameObject MeuHeroi;
     public GameObject AreaAtkInimigo;
+    public int contSumAp = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -33,17 +34,20 @@ public class Boss : MonoBehaviour
         else
         {
             float distancia = Vector3.Distance(transform.position, MeuHeroi.transform.position);
-            if (distancia < 12 && distancia >= 2f)
+            if (distancia < 12 && distancia >= 3.5f)
             {
                 Anim.SetBool("Andar", true);
+                SumirAparecer();
                 Perseguir();
             }
-            else if (distancia < 2f)
+            else if (distancia < 3.5f)
             {
+                contSumAp = 0;
                 Ataque();
             }
             else
             {
+                contSumAp = 0;
                 Anim.SetBool("Andar", false);
             }
 
@@ -51,9 +55,19 @@ public class Boss : MonoBehaviour
 
     }
 
+    void SumirAparecer()
+    {
+        contSumAp++;
+        if(contSumAp > 800)
+        {
+            Anim.SetTrigger("DesaAp");
+            contSumAp = 0;
+        }
+    }
+
     void Perseguir()
     {
-        transform.position = Vector2.MoveTowards(transform.position, MeuHeroi.transform.position, 0.01f);
+        transform.position = Vector2.MoveTowards(transform.position, MeuHeroi.transform.position, 0.0075f);
     }
 
     private void OnTriggerStay2D(Collider2D colidiu)
