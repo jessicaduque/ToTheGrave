@@ -1788,7 +1788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &516859075
 Transform:
   m_ObjectHideFlags: 0
@@ -2440,6 +2440,7 @@ MonoBehaviour:
   posFinal: 2
   AreaAtkInimigo: {fileID: 1739422416}
   contAtaque: 0
+  posAgoraHeroi: {x: 0, y: 0, z: 0}
   direcao: direita
 --- !u!61 &599063384
 BoxCollider2D:
@@ -2712,6 +2713,7 @@ MonoBehaviour:
   posFinal: 0
   AreaAtkInimigo: {fileID: 1184483403}
   contAtaque: 0
+  posAgoraHeroi: {x: 0, y: 0, z: 0}
   direcao: direita
 --- !u!61 &639391781
 BoxCollider2D:
@@ -8410,7 +8412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282405798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.13, y: -31.79, z: 0}
+  m_LocalPosition: {x: -38.13, y: -31.79, z: -1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8455,6 +8457,7 @@ MonoBehaviour:
   posFinal: 2
   AreaAtkInimigo: {fileID: 516859074}
   contAtaque: 0
+  posAgoraHeroi: {x: 0, y: 0, z: 0}
   direcao: direita
 --- !u!50 &1282405802
 Rigidbody2D:
@@ -11216,6 +11219,7 @@ MonoBehaviour:
   posFinal: 3
   AreaAtkInimigo: {fileID: 69923454}
   contAtaque: 0
+  posAgoraHeroi: {x: 0, y: 0, z: 0}
   direcao: direita
 --- !u!50 &1878928632
 Rigidbody2D:
@@ -20701,13 +20705,14 @@ GameObject:
   - component: {fileID: 2125314279}
   - component: {fileID: 2125314278}
   - component: {fileID: 2125314277}
-  m_Layer: 0
+  - component: {fileID: 2125314281}
+  m_Layer: 8
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2125314276
 Transform:
   m_ObjectHideFlags: 0
@@ -20716,7 +20721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125314275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.71, y: -2.8, z: -0.0111898435}
+  m_LocalPosition: {x: 13.85, y: -29.02, z: -0.0111898435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20735,6 +20740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f9dc25a213dd944b9ecbbb261a17ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velX: 1
+  AreaAtkInimigo: {fileID: 0}
 --- !u!50 &2125314278
 Rigidbody2D:
   serializedVersion: 4
@@ -20766,21 +20773,21 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 4.415, y: 5.251059}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.415, y: 5.251059}
   m_EdgeRadius: 0
 --- !u!212 &2125314280
 SpriteRenderer:
@@ -20823,7 +20830,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -1428615910, guid: 349dc69ce0fe7744c9bebe0eac7c5a29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20834,6 +20841,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2125314281
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125314275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2aff358bdf3f0344fa237bd743105a71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7891904218647702536
 PrefabInstance:
   m_ObjectHideFlags: 0
