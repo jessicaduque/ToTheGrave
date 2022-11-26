@@ -14,6 +14,9 @@ public class FantasmaSeguir : MonoBehaviour
     private bool morreu = false;
     private GameObject MeuHeroi;
     public GameObject AreaAtkInimigo;
+    public int contAtaque = 0;
+    public Vector3 posAgoraHeroi;
+    public string direcao = "direita";
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,7 @@ public class FantasmaSeguir : MonoBehaviour
 
     void Update()
     {
+        ChecarLado();
         if (morreu == true)
         {
             GetComponent<Collider2D>().enabled = false;
@@ -33,12 +37,13 @@ public class FantasmaSeguir : MonoBehaviour
         else
         {
             float distancia = Vector3.Distance(transform.position, MeuHeroi.transform.position);
-            if (distancia < 3)
+            if (distancia < 8f)
             {
                 Ataque();
             }
             else
             {
+                contAtaque = 0;
                 Mover();
             }
 
@@ -46,26 +51,29 @@ public class FantasmaSeguir : MonoBehaviour
 
     }
 
-    void Mover()
+    void ChecarLado()
     {
-        Corpo.velocity = new Vector2(velX, 0);
-        if (velX != 0)
+        if (direcao == "direita")
         {
-            Anim.SetBool("Andando", true);
+            transform.localScale = new Vector3(0.6f, 0.6f, 1);
         }
         else
         {
-            Anim.SetBool("Andando", false);
+            transform.localScale = new Vector3(-0.6f, 0.6f, 1);
         }
+    }
+    void Mover()
+    {
+        Corpo.velocity = new Vector2(velX, 0);
         if (transform.position.x < posInicial)
         {
             velX = 3;
-            transform.localScale = new Vector3(0.6f, 0.6f, 1);
+            direcao = "direita";
         }
         if (transform.position.x > posFinal)
         {
             velX = -3;
-            transform.localScale = new Vector3(-0.6f, 0.6f, 1);
+            direcao = "esquerda";
         }
     }
 
@@ -81,16 +89,52 @@ public class FantasmaSeguir : MonoBehaviour
 
     void Ataque()
     {
-        Corpo.velocity = new Vector2(0, 0);
-        Anim.SetTrigger("Ataque");
-        if (transform.position.x > MeuHeroi.transform.position.x)
+        if (contAtaque == 1)
         {
-            transform.localScale = new Vector3(-0.6f, 0.6f, 1);
+            posAgoraHeroi = MeuHeroi.transform.position;
+            if (transform.position.x > MeuHeroi.transform.position.x)
+            {
+                direcao = "esquerda";
+            }
+            else
+            {
+                direcao = "direita";
+            }
+        }
+        else if (contAtaque < 500)
+        {
+            if(direcao == "direita")
+            {
+                transform.position = Vector3.MoveTowards(transform.position, posAgoraHeroi + new Vector3(4f, 0, 0), 0.02f);
+                if (Vector3.Distance(transform.position, posAgoraHeroi + new Vector3(4f, 0, 0)) < 0.001f)
+                {
+                    contAtaque = 500;
+                }
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, posAgoraHeroi - new Vector3(4f, 0, 0), 0.02f);
+                if (Vector3.Distance(transform.position, posAgoraHeroi - new Vector3(4f, 0, 0)) < 0.001f)
+                {
+                    contAtaque = 500;
+                }
+            }
+            
         }
         else
         {
-            transform.localScale = new Vector3(0.6f, 0.6f, 1);
+            if (contAtaque > 1000)
+            {
+                contAtaque = 0;
+            }
+            else
+            {
+                Corpo.velocity = new Vector2(0f, 0f);
+            }
+
         }
+
+        contAtaque++;
     }
 
     public void PerdeuHP()
@@ -105,13 +149,13 @@ public class FantasmaSeguir : MonoBehaviour
     public void Morrer()
     {
         Corpo.velocity = new Vector2(0, 2);
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         morreu = true;
 
     }
 
     public void Desaparecer()
     {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         Destroy(this.gameObject);
     }
 

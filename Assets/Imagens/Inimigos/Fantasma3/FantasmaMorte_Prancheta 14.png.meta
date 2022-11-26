@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19d970b3c94bc904d89ae80319781d33
+guid: f750f0e3babfced47b5fc1edbf9ad55a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fantasma5Morte_Prancheta 11_0
+      name: FantasmaMorte_Prancheta 14_0
       rect:
         serializedVersion: 2
         x: 203
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420868e40158ea14b825299d4a52da39
-      internalID: 1354372695
+      spriteID: e3e51816f4a287146b07ba96941b535c
+      internalID: 1873755854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasma5Morte_Prancheta 11_1
+      name: FantasmaMorte_Prancheta 14_1
       rect:
         serializedVersion: 2
         x: 1957
@@ -139,19 +139,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e34988ab1929f34fadf2900f550c1ca
-      internalID: -2010907838
+      spriteID: 4fef19d6ca8820a438b3bbb91ac83804
+      internalID: 636225166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasma5Morte_Prancheta 11_2
+      name: FantasmaMorte_Prancheta 14_2
       rect:
         serializedVersion: 2
-        x: 261
+        x: 262
         y: 2835
-        width: 1232
+        width: 1231
         height: 1677
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d06aa523b7e8f404eb0b63a3db798dcf
-      internalID: 2133295929
+      spriteID: 965e693180433df41859c9ba19a60a61
+      internalID: -820457399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasma5Morte_Prancheta 11_3
+      name: FantasmaMorte_Prancheta 14_3
       rect:
         serializedVersion: 2
         x: 2109
@@ -181,18 +181,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8255fce09ca13eb48b94dae1f27ea8c1
-      internalID: 1321176030
+      spriteID: 2ad624126b844ef4080ea7171ee6db4c
+      internalID: 1593682957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasma5Morte_Prancheta 11_4
+      name: FantasmaMorte_Prancheta 14_4
       rect:
         serializedVersion: 2
         x: 531
-        y: 1033
+        y: 950
         width: 678
         height: 1314
       alignment: 0
@@ -202,19 +202,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 779a25833b28ba2468434f6392c689c9
-      internalID: -1214155025
+      spriteID: a1e1f27cdc38fbd4b9fdee4c66368e41
+      internalID: -1506373874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasma5Morte_Prancheta 11_5
+      name: FantasmaMorte_Prancheta 14_5
       rect:
         serializedVersion: 2
-        x: 2196
+        x: 2199
         y: 1230
-        width: 681
+        width: 678
         height: 1131
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 989276e3f308aa44596cc0d3ba93fc27
-      internalID: -28628416
+      spriteID: b54cbfb47f2d2154db147bf6429f6016
+      internalID: 647426389
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fantasma5Morte_Prancheta 11_2: 2133295929
-      Fantasma5Morte_Prancheta 11_0: 1354372695
-      Fantasma5Morte_Prancheta 11_3: 1321176030
-      Fantasma5Morte_Prancheta 11_4: -1214155025
-      Fantasma5Morte_Prancheta 11_1: -2010907838
-      Fantasma5Morte_Prancheta 11_5: -28628416
+      FantasmaMorte_Prancheta 14_3: 1593682957
+      FantasmaMorte_Prancheta 14_0: 1873755854
+      FantasmaMorte_Prancheta 14_4: -1506373874
+      FantasmaMorte_Prancheta 14_2: -820457399
+      FantasmaMorte_Prancheta 14_1: 636225166
+      FantasmaMorte_Prancheta 14_5: 647426389
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

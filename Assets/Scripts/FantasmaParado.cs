@@ -52,13 +52,13 @@ public class FantasmaParado : MonoBehaviour
     public void Morrer()
     {
         Corpo.velocity = new Vector2(0, 2);
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         morreu = true;
 
     }
 
     public void Desaparecer()
     {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         Destroy(this.gameObject);
     }
 

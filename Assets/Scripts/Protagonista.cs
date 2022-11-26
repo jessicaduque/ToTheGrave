@@ -218,7 +218,7 @@ public class Protagonista : MonoBehaviour
 
     public void DiminuiTransformacao()
     {
-        tempoTransformacao--;
+        tempoTransformacao -= 3;
         MinhaBarraDeTransformacao.value = tempoTransformacao;
         if(tempoTransformacao == 0)
         {
