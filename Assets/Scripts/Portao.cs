@@ -14,6 +14,7 @@ public class Portao : MonoBehaviour
     public Text mortesInsuficientes;
     public Image caixaDialogo;
     public bool inPortao = false;
+    private bool bossMorto = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class Portao : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().CheckInimigosMortos())
+                if (bossMorto)
                 {
                     AbrirPortao();
                 }
@@ -72,6 +73,11 @@ public class Portao : MonoBehaviour
         {
             inPortao = false;
         }
+    }
+
+    public void BossMorto()
+    {
+        bossMorto = true;
     }
    
 }

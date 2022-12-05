@@ -7,12 +7,12 @@ public class Boss : MonoBehaviour
 
     private Rigidbody2D Corpo;
     private Animator Anim;
-    public float velX = 1;
+    public float velX = 0.9f;
     private int vida = 5;
     private bool morreu = false;
     private GameObject MeuHeroi;
     public GameObject AreaAtkInimigo;
-    public int contSumAp = 0;
+    private int contSumAp = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -109,7 +109,8 @@ public class Boss : MonoBehaviour
     public void Morrer()
     {
 
-        Corpo.velocity = new Vector2(0, -2);
+        Corpo.velocity = new Vector2(0, 3);
+        GameObject.FindGameObjectWithTag("Portao").GetComponent<Portao>().BossMorto();
         morreu = true;
 
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1644bb6b8dbffde40bd13e347d4016f4
+guid: f534ae25f22f84749b885397bdc3085e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,43 +104,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores_0
+      name: protatkadaga-04_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 562
-        height: 631
+        x: 119
+        y: 7517
+        width: 2350
+        height: 2771
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447c6167a8191a4c991d6ff870fe68b
-      internalID: 1577308803
+      spriteID: 9e796dc685ba5864fa975c168268574f
+      internalID: -1630866458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Arvores_1
+      name: protatkadaga-04_3
       rect:
         serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 555
-        height: 631
+        x: 3239
+        y: 7456
+        width: 2350
+        height: 2771
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562219216bb68b948b6bed48cd28655a
-      internalID: -486335061
+      spriteID: d80a768e9829f7e448e2ff1a4c0c7ab4
+      internalID: -653860336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protatkadaga-04_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 3574
+        width: 2350
+        height: 2771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7513ba812a8fc4c9cd06dc3a83393a
+      internalID: -2101786424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protatkadaga-04_5
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 3470
+        width: 2350
+        height: 2771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1a30710a5ad0e43b1637a2171bb7ce
+      internalID: 548680646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protatkadaga-04_6
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 275
+        width: 2350
+        height: 2771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d8138e9adda994e97225b97bf66048
+      internalID: 1876139376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protatkadaga-04_7
+      rect:
+        serializedVersion: 2
+        x: 3346
+        y: 387
+        width: 2350
+        height: 2771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647e587ae8e63c049a206ea4eac1b292
+      internalID: -129053253
       vertices: []
       indices: 
       edges: []
@@ -156,8 +240,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores_0: 1577308803
-      Arvores_1: -486335061
+      protatkadaga-04_2: -1630866458
+      protatkadaga-04_5: 548680646
+      protatkadaga-04_1: 1153508867
+      protatkadaga-04_7: -129053253
+      protatkadaga-04_0: 612147283
+      protatkadaga-04_3: -653860336
+      protatkadaga-04_6: 1876139376
+      protatkadaga-04_4: -2101786424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

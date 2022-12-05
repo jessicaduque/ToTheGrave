@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1644bb6b8dbffde40bd13e347d4016f4
+guid: 5a6f38a0495a02e4bad60487526f1091
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,43 +104,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores_0
+      name: protatkenergia-05_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 562
-        height: 631
+        x: 312
+        y: 9440
+        width: 2063
+        height: 2898
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447c6167a8191a4c991d6ff870fe68b
-      internalID: 1577308803
+      spriteID: d483a28814a8c5b408289f710a4ea7d3
+      internalID: -801861816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Arvores_1
+      name: protatkenergia-05_1
       rect:
         serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 555
-        height: 631
+        x: 2768
+        y: 9299
+        width: 2063
+        height: 2898
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562219216bb68b948b6bed48cd28655a
-      internalID: -486335061
+      spriteID: c909b146ba529a04aa3a91573f32c464
+      internalID: 387456142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protatkenergia-05_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 5834
+        width: 2063
+        height: 2898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be60f3c9554e094b978d7c4c1dc3aa0
+      internalID: 1179571349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protatkenergia-05_3
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 5790
+        width: 2063
+        height: 2898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2127ed43632f9b04795f81dcc3297ed7
+      internalID: -1668644669
       vertices: []
       indices: 
       edges: []
@@ -156,8 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores_0: 1577308803
-      Arvores_1: -486335061
+      protatkenergia-05_3: -1668644669
+      protatkenergia-05_1: 387456142
+      protatkenergia-05_0: -801861816
+      protatkenergia-05_2: 1179571349
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

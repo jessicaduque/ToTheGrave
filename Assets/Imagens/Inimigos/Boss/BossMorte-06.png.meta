@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1644bb6b8dbffde40bd13e347d4016f4
+guid: 33caf0695b80d20489f104b0e7367e10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,43 +104,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores_0
+      name: BossMorte-06_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 562
-        height: 631
+        x: 470
+        y: 4949
+        width: 1765
+        height: 1925
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447c6167a8191a4c991d6ff870fe68b
-      internalID: 1577308803
+      spriteID: 66a0b5ee7678a494f928826b7e9ce674
+      internalID: -924789691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Arvores_1
+      name: BossMorte-06_1
       rect:
         serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 555
-        height: 631
+        x: 3019
+        y: 5022
+        width: 1667
+        height: 1689
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562219216bb68b948b6bed48cd28655a
-      internalID: -486335061
+      spriteID: e8826584ea7c2db49817ca50d4ffca4f
+      internalID: -153498192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMorte-06_4
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2848
+        width: 1600
+        height: 1556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67b6306d177b614ca0c9fe8e5642add
+      internalID: 1809766669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMorte-06_6
+      rect:
+        serializedVersion: 2
+        x: 3258
+        y: 3058
+        width: 973
+        height: 1225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aea1069eec4a34595174b828ba7ebc
+      internalID: 1754763986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMorte-06_10
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 703
+        width: 697
+        height: 1377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffabc8d3d8ffa734ebc40e9f9aadd1f3
+      internalID: 956035537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossMorte-06_11
+      rect:
+        serializedVersion: 2
+        x: 3616
+        y: 1022
+        width: 485
+        height: 902
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133fccc3b1b955745a5b332024a241fd
+      internalID: 124385101
       vertices: []
       indices: 
       edges: []
@@ -156,8 +240,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores_0: 1577308803
-      Arvores_1: -486335061
+      BossMorte-06_7: -28661358
+      BossMorte-06_4: 1809766669
+      BossMorte-06_10: 956035537
+      BossMorte-06_11: 124385101
+      BossMorte-06_8: 354114760
+      BossMorte-06_9: -1323811755
+      BossMorte-06_0: -924789691
+      BossMorte-06_1: -153498192
+      BossMorte-06_2: -1940217490
+      BossMorte-06_5: 203291056
+      BossMorte-06_3: -1674374914
+      BossMorte-06_6: 1754763986
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

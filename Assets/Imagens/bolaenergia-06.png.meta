@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1644bb6b8dbffde40bd13e347d4016f4
+guid: a7f09c0550afb9345868713869e4107f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,43 +104,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores_0
+      name: bolaenergia-06_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 562
-        height: 631
+        x: 2216
+        y: 6135
+        width: 2203
+        height: 2209
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447c6167a8191a4c991d6ff870fe68b
-      internalID: 1577308803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Arvores_1
-      rect:
-        serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 555
-        height: 631
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 562219216bb68b948b6bed48cd28655a
-      internalID: -486335061
+      spriteID: fb16786a0330b8549bfb1270e091bca7
+      internalID: 623001224
       vertices: []
       indices: 
       edges: []
@@ -156,8 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores_0: 1577308803
-      Arvores_1: -486335061
+      bolaenergia-06_0: 623001224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1644bb6b8dbffde40bd13e347d4016f4
+guid: 92e4c95659151214185ac8bd456b8f3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,43 +104,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores_0
+      name: BossAtaque-06-07_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 562
-        height: 631
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 50
+        y: 4907
+        width: 2480
+        height: 1926
+      alignment: 9
+      pivot: {x: 0.37264112, y: 0.49701834}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447c6167a8191a4c991d6ff870fe68b
-      internalID: 1577308803
+      spriteID: e0e3386698e16ea4395c6cea94dc682e
+      internalID: 1500365289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Arvores_1
+      name: BossAtaque-06-07_2
       rect:
         serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 555
-        height: 631
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2988
+        y: 4869
+        width: 2480
+        height: 1926
+      alignment: 9
+      pivot: {x: 0.3332756, y: 0.5059633}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562219216bb68b948b6bed48cd28655a
-      internalID: -486335061
+      spriteID: 44cc0da49c654574c80a03859c9b542a
+      internalID: 824756952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossAtaque-06-07_6
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2520
+        width: 2480
+        height: 1926
+      alignment: 9
+      pivot: {x: 0.3355913, y: 0.52385354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91afc06f2914c6749943fa967414e36a
+      internalID: -792370547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossAtaque-06-07_8
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 2378
+        width: 2480
+        height: 1926
+      alignment: 9
+      pivot: {x: 0.3309601, y: 0.5119268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e07846cae78ee4cb70a0958b56b226
+      internalID: -1921967611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossAtaque-06-07_12
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 272
+        width: 2480
+        height: 1926
+      alignment: 9
+      pivot: {x: 0.35874742, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7724e8fe94adc4f808f4fcdd6397de
+      internalID: 337840182
       vertices: []
       indices: 
       edges: []
@@ -156,8 +219,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores_0: 1577308803
-      Arvores_1: -486335061
+      BossAtaque-06-07_3: -410873004
+      BossAtaque-06-07_4: 1059198998
+      BossAtaque-06-07_12: 337840182
+      BossAtaque-06-07_0: 1500365289
+      BossAtaque-06-07_5: -1522113052
+      BossAtaque-06-07_14: -70286866
+      BossAtaque-06-07_2: 824756952
+      BossAtaque-06-07_11: 1576079280
+      BossAtaque-06-07_1: -1593943236
+      BossAtaque-06-07_9: 908978807
+      BossAtaque-06-07_6: -792370547
+      BossAtaque-06-07_10: 2098770135
+      BossAtaque-06-07_13: 800698085
+      BossAtaque-06-07_8: -1921967611
+      BossAtaque-06-07_7: 666471758
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

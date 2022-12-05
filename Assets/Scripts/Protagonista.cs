@@ -77,9 +77,7 @@ public class Protagonista : MonoBehaviour
         }
         else
         {
-            GameObject.FindGameObjectWithTag("PeProtagonista")
-                .GetComponent<PeProtagonista>()
-                .NovaInicial();
+            GameObject.FindGameObjectWithTag("PeProtagonista").GetComponent<PeProtagonista>().NovaInicial();
             DiminuiTransformacao();
         }
     }
@@ -148,7 +146,6 @@ public class Protagonista : MonoBehaviour
         Destroy(Dps, 3f);
     }
 
-
     public bool EstadoProtagonista()
     {
         return morcego;
@@ -172,6 +169,7 @@ public class Protagonista : MonoBehaviour
         }
         if (colidiu.gameObject.tag == "AtaqueInimigo")
         {
+            Debug.Log("MACHUCOU");
             colidiu.gameObject.SetActive(false);
             vidaPerdida = 1;
             Anim.SetTrigger("Dano");
@@ -194,6 +192,10 @@ public class Protagonista : MonoBehaviour
             }
             MinhaBarraDeVida.value = HP;
             Destroy(colidiu.gameObject);
+        }
+        if (colidiu.gameObject.tag == "PontoVitoria")
+        {
+
         }
     }
 

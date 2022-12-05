@@ -16,6 +16,8 @@ TagManager:
   - Portao
   - PeProtagonista
   - Sangue
+  - PontoVitoria
+  - Timer
   layers:
   - Default
   - TransparentFX

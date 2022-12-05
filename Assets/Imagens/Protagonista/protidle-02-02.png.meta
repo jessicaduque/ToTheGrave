@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1644bb6b8dbffde40bd13e347d4016f4
+guid: db8f01a6ac06d4a41ba4a42f78d00efc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvores_0
+      name: protidle-02-02_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 562
-        height: 631
+        x: 347
+        y: 4906
+        width: 1797
+        height: 2703
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447c6167a8191a4c991d6ff870fe68b
-      internalID: 1577308803
+      spriteID: 950ba81ad3c14974981f49793c454b46
+      internalID: 1745533534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Arvores_1
+      name: protidle-02-02_1
       rect:
         serializedVersion: 2
-        x: 2010
-        y: 0
-        width: 555
-        height: 631
+        x: 3010
+        y: 4890
+        width: 1876
+        height: 2765
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562219216bb68b948b6bed48cd28655a
-      internalID: -486335061
+      spriteID: 6dc04365f8fdc5640989fd2669db18f1
+      internalID: -1719451457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protidle-02-02_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1333
+        width: 1852
+        height: 2813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7881ddf5ae241e43b2e4957598b1d5f
+      internalID: -2007436755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: protidle-02-02_3
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 1140
+        width: 1875
+        height: 2764
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb47c7e2762f6f444bb4f12af35428e4
+      internalID: -1212911965
       vertices: []
       indices: 
       edges: []
@@ -156,8 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Arvores_0: 1577308803
-      Arvores_1: -486335061
+      protidle-02-02_0: 1745533534
+      protidle-02-02_2: -2007436755
+      protidle-02-02_1: -1719451457
+      protidle-02-02_3: -1212911965
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

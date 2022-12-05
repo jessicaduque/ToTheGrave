@@ -72,4 +72,9 @@ public class Timer : MonoBehaviour
             }
         }
     }
+
+    public int TempoGasto()
+    {
+        return 15 - minutos;
+    }
 }
