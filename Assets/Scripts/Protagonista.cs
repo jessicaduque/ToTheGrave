@@ -35,7 +35,7 @@ public class Protagonista : MonoBehaviour
     void Update()
     {
         if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().ComecouJogo()) {
-            contTempo++; 
+            contTempo++;
         }
         Movimento();
 
@@ -43,13 +43,14 @@ public class Protagonista : MonoBehaviour
         {
             if (tempoTransformacao == 3000)
             {
-                Corpo.velocity = new Vector2(0.0f, 0.0f);
-                morcego = true;
+                Anim.SetTrigger("VirarMor");
+                Anim.SetBool("Morcego", true);
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && morcego == true)
         {
+            Anim.SetBool("Morcego", false);
             morcego = false;
         }
 
@@ -68,7 +69,7 @@ public class Protagonista : MonoBehaviour
             }
 
 
-            if(tempoTransformacao < 3000)
+            if (tempoTransformacao < 3000)
             {
                 tempoTransformacao++;
                 MinhaBarraDeTransformacao.value = tempoTransformacao;
@@ -84,7 +85,7 @@ public class Protagonista : MonoBehaviour
 
     void Movimento()
     {
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             Anim.SetBool("Andar", true);
         }
@@ -98,9 +99,9 @@ public class Protagonista : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
             lado = "Esquerda";
         }
-        else if (Input.GetKey(KeyCode.D)) 
-        { 
-        
+        else if (Input.GetKey(KeyCode.D))
+        {
+
             transform.position = new Vector3(transform.position.x + vel, transform.position.y, transform.position.z);
             transform.localScale = new Vector3(1, 1, 1);
             lado = "Direita";
@@ -161,19 +162,28 @@ public class Protagonista : MonoBehaviour
         MeuAtk.SetActive(false);
     }
 
+    private void OnTriggerStay2D(Collider2D colidiu)
+    {
+        if (colidiu.gameObject.tag == "AtaqueInimigo")
+        {
+            colidiu.gameObject.SetActive(false);
+            vidaPerdida = 1;
+            Anim.SetTrigger("Dano");
+        }
+    }
+
+    public void MorrerComoMorcego()
+    {
+        Anim.SetTrigger("MorreuMorcego");
+    }
+
     private void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "CheckPoint")
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().MudarCheckpoint();
         }
-        if (colidiu.gameObject.tag == "AtaqueInimigo")
-        {
-            Debug.Log("MACHUCOU");
-            colidiu.gameObject.SetActive(false);
-            vidaPerdida = 1;
-            Anim.SetTrigger("Dano");
-        }
+
         if (colidiu.gameObject.tag == "Caveira")
         {
             caveiras++;
@@ -182,7 +192,7 @@ public class Protagonista : MonoBehaviour
         }
         if (colidiu.gameObject.tag == "Sangue")
         {
-            if(HP > 4)
+            if (HP > 4)
             {
                 HP = 10;
             }
@@ -210,7 +220,14 @@ public class Protagonista : MonoBehaviour
 
     public void PerdeHP()
     {
-        HP -= vidaPerdida;
+        if (HP - vidaPerdida < 0)
+        {
+            HP = 0;
+        }
+        else
+        {
+            HP -= vidaPerdida;
+        }
         MinhaBarraDeVida.value = HP;
         if (HP <= 0)
         {
@@ -222,8 +239,9 @@ public class Protagonista : MonoBehaviour
     {
         tempoTransformacao -= 3;
         MinhaBarraDeTransformacao.value = tempoTransformacao;
-        if(tempoTransformacao == 0)
+        if (tempoTransformacao == 0)
         {
+            Anim.SetBool("Morcego", false);
             morcego = false;
         }
     }
@@ -248,17 +266,33 @@ public class Protagonista : MonoBehaviour
         qtdpulos = 1;
     }
 
-    //Revivo Meu Heroi;
-    //Esse metodo precisa de um parametro
     public void NovaChance(Vector3 checkPosition)
     {
         HP = 6;
+        MinhaBarraDeVida.value = HP;
         qtdpulos = 1;
         morcego = false;
         Anim.SetBool("Morto", false);
         Anim.SetTrigger("Reviver");
+        Corpo.GetComponent<Collider2D>().enabled = true;
         transform.position = checkPosition;
 
+    }
+
+    public void AcabarTransformacao()
+    {
+        morcego = true;
+        Corpo.velocity = new Vector2(0.0f, 0.0f);
+    }
+    public void AlmaCima()
+    {
+        Corpo.GetComponent<Collider2D>().enabled = false;
+        Corpo.velocity = new Vector2(0, 4);
+    }
+
+    public void AlmaBaixo()
+    {
+        Corpo.velocity = new Vector2(0, -6);
     }
 
 }

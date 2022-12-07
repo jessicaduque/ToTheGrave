@@ -109,7 +109,6 @@ public class Boss : MonoBehaviour
     public void Morrer()
     {
 
-        Corpo.velocity = new Vector2(0, 3);
         GameObject.FindGameObjectWithTag("Portao").GetComponent<Portao>().BossMorto();
         morreu = true;
 
