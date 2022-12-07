@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2877555423536266364}
   - component: {fileID: 2877555423536266365}
   - component: {fileID: 3883475001844309171}
+  - component: {fileID: 1030951444834771552}
   m_Layer: 7
   m_Name: BolaEnergia
   m_TagString: AtaqueHeroi
@@ -136,3 +137,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.17
+--- !u!95 &1030951444834771552
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877555423536266366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1dc3645f0deb9b41aaa7f86470b4abe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

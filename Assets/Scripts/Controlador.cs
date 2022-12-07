@@ -48,7 +48,7 @@ public class Controlador : MonoBehaviour
 
     public void Conquistas()
     {
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().ValorCaveiras() == 1 && cct == false)
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().ValorCaveiras() == 8 && cct == false)
         {
             ConquistaColecionadoraTotal.gameObject.SetActive(true);
             segundos += 1 * Time.deltaTime;
@@ -76,11 +76,10 @@ public class Controlador : MonoBehaviour
         {
             ConquistaRecomecandoOCiclo.gameObject.SetActive(true);
             segundos += 1 * Time.deltaTime;
-            if (segundos > 5)
+            if (segundos > 2)
             {
                 ConquistaRecomecandoOCiclo.gameObject.SetActive(false);
                 croc = true;
-                segundos = 0;
             }
         }
 
@@ -88,7 +87,7 @@ public class Controlador : MonoBehaviour
         {
             ConquistaEficienciaMaxima.gameObject.SetActive(true);
             segundos += 1 * Time.deltaTime;
-            if (segundos > 5)
+            if (segundos > 4)
             {
                 ConquistaEficienciaMaxima.gameObject.SetActive(false);
                 cem = true;
@@ -100,7 +99,7 @@ public class Controlador : MonoBehaviour
         {
             ConquistaAcostumadaAoCemiterio.gameObject.SetActive(true);
             segundos += 1 * Time.deltaTime;
-            if (segundos > 5)
+            if (segundos > 6)
             {
                 ConquistaAcostumadaAoCemiterio.gameObject.SetActive(false);
                 caac = true;

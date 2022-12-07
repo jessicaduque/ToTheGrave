@@ -28,7 +28,7 @@ public class Protagonista : MonoBehaviour
     {
         Corpo = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
-        transform.position = new Vector3(-20.688f, -28.65f, 0);
+        transform.position = new Vector3(-21.688f, -28.65f, 0);
     }
 
     // Update is called once per frame
@@ -179,6 +179,7 @@ public class Protagonista : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colidiu)
     {
+
         if (colidiu.gameObject.tag == "CheckPoint")
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().MudarCheckpoint();
