@@ -24,6 +24,7 @@ public class PeProtagonista : MonoBehaviour
         if (colidiu.gameObject.tag == "Morte")
         {
             GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().ProtagonistaMorreuCova();
+
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().EstadoProtagonista())
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().MorrerComoMorcego();

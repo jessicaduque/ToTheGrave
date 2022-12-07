@@ -19,11 +19,18 @@ public class Controlador : MonoBehaviour
     private bool protagonistaVenceu = false;
 
     public Image ConquistaColecionadoraTotal;
-    public Image ConqusitaEficienciaMaxima;
+    private bool cct = false;
+    public Image ConquistaEficienciaMaxima;
+    private bool cem = false;
     public Image ConquistaRecomecandoOCiclo;
+    private bool croc = false;
     public Image ConquistaAcostumadaAoCemiterio;
+    private bool caac = false;
     public Image ConquistaPeNaCova;
+    private bool cpnc = false;
     private bool peNaCova = false;
+
+    public float segundos = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,34 +43,71 @@ public class Controlador : MonoBehaviour
     void Update()
     {
         SpawnBoss();
+        Conquistas();
     }
 
-    public void Conqusitas()
+    public void Conquistas()
     {
-        if (protagonistaVenceu)
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().ValorCaveiras() == 1 && cct == false)
         {
-            //aaa
+            ConquistaColecionadoraTotal.gameObject.SetActive(true);
+            segundos += 1 * Time.deltaTime;
+            if (segundos > 5)
+            {
+                ConquistaColecionadoraTotal.gameObject.SetActive(false);
+                cct = true;
+                segundos = 0;
+            }
         }
 
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().ValorCaveiras() == 8)
+        if (peNaCova && cpnc == false)
         {
-            //aaa
+            ConquistaPeNaCova.gameObject.SetActive(true);
+            segundos += 1 * Time.deltaTime;
+            if (segundos > 5)
+            {
+                ConquistaPeNaCova.gameObject.SetActive(false);
+                cpnc = true;
+                segundos = 0;
+            }
         }
 
-        if(protagonistaVenceu && GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().TempoGasto() < 8) { }
+        if (protagonistaVenceu && croc == false)
         {
-           // aaa
+            ConquistaRecomecandoOCiclo.gameObject.SetActive(true);
+            segundos += 1 * Time.deltaTime;
+            if (segundos > 5)
+            {
+                ConquistaRecomecandoOCiclo.gameObject.SetActive(false);
+                croc = true;
+                segundos = 0;
+            }
         }
 
-        if(protagonistaVenceu &&  GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().MinhasVidas() == 3)
+        if (protagonistaVenceu && GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().TempoGasto() < 8 && cem == false)
         {
-            //aaa
+            ConquistaEficienciaMaxima.gameObject.SetActive(true);
+            segundos += 1 * Time.deltaTime;
+            if (segundos > 5)
+            {
+                ConquistaEficienciaMaxima.gameObject.SetActive(false);
+                cem = true;
+                segundos = 0;
+            }
         }
 
-        if (peNaCova)
+        if (protagonistaVenceu && GameObject.FindGameObjectWithTag("Player").GetComponent<Protagonista>().MinhasVidas() == 3 && caac == false)
         {
-            //aaa
+            ConquistaAcostumadaAoCemiterio.gameObject.SetActive(true);
+            segundos += 1 * Time.deltaTime;
+            if (segundos > 5)
+            {
+                ConquistaAcostumadaAoCemiterio.gameObject.SetActive(false);
+                caac = true;
+                segundos = 0;
+            }
         }
+
     }
 
     public void IniciarJogo()
@@ -145,6 +189,11 @@ public class Controlador : MonoBehaviour
     public bool ComecouJogo()
     {
         return comecouJogo;
+    }
+
+    public void SairDoJogo()
+    {
+        Application.Quit();
     }
     
 }
