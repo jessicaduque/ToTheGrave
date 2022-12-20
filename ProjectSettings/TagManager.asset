@@ -18,6 +18,7 @@ TagManager:
   - Sangue
   - PontoVitoria
   - Timer
+  - AtaqueBoss
   layers:
   - Default
   - TransparentFX

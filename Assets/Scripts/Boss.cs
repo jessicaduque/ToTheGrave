@@ -67,7 +67,7 @@ public class Boss : MonoBehaviour
 
     void Perseguir()
     {
-        transform.position = Vector2.MoveTowards(transform.position, MeuHeroi.transform.position, 0.0075f);
+        transform.position = Vector2.MoveTowards(transform.position, MeuHeroi.transform.position, 0.1f);
     }
 
     private void OnTriggerStay2D(Collider2D colidiu)
@@ -116,6 +116,7 @@ public class Boss : MonoBehaviour
 
     public void Desaparecer()
     {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().InimigoMorreu();
         Destroy(this.gameObject);
     }
 

@@ -20,7 +20,7 @@ public class Protagonista : MonoBehaviour
     private float vel;
     private bool morcego = false;
     private int contTempo = 0;
-    private int tempoTransformacao = 3000;
+    public int tempoTransformacao = 3000;
     private int vidaPerdida = 0;
 
     // Start is called before the first frame update
@@ -41,14 +41,14 @@ public class Protagonista : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (tempoTransformacao == 3000)
+            if (tempoTransformacao >= 3000 && Anim.GetBool("Morcego") == false)
             {
-                Anim.SetTrigger("VirarMor");
                 Anim.SetBool("Morcego", true);
+                Anim.SetTrigger("VirarMor");
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.T) && morcego == true)
+        if (Input.GetKeyDown(KeyCode.T) && morcego)
         {
             Anim.SetBool("Morcego", false);
             morcego = false;
@@ -71,7 +71,7 @@ public class Protagonista : MonoBehaviour
 
             if (tempoTransformacao < 3000)
             {
-                tempoTransformacao++;
+                tempoTransformacao += 25;
                 MinhaBarraDeTransformacao.value = tempoTransformacao;
             }
 
@@ -109,7 +109,7 @@ public class Protagonista : MonoBehaviour
 
         if (morcego)
         {
-            vel = 0.016f;
+            vel = 0.21f;
             qtdpulos = 0;
             Corpo.gravityScale = 0;
             if (Input.GetKey(KeyCode.W))
@@ -123,7 +123,7 @@ public class Protagonista : MonoBehaviour
         }
         else
         {
-            vel = 0.01f;
+            vel = 0.13f;
             Corpo.gravityScale = 1;
             if (Input.GetKeyDown(KeyCode.W))
             {
@@ -137,7 +137,7 @@ public class Protagonista : MonoBehaviour
     }
     void Pular()
     {
-        Corpo.AddForce(Vector2.up * 460);
+        Corpo.AddForce(Vector2.up * 320);
     }
 
     public void Disparo()
@@ -164,7 +164,7 @@ public class Protagonista : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D colidiu)
     {
-        if (colidiu.gameObject.tag == "AtaqueInimigo")
+        if (colidiu.gameObject.tag == "AtaqueBoss")
         {
             colidiu.gameObject.SetActive(false);
             vidaPerdida = 1;
@@ -179,6 +179,12 @@ public class Protagonista : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colidiu)
     {
+        if (colidiu.gameObject.tag == "AtaqueInimigo")
+        {
+            colidiu.gameObject.SetActive(false);
+            vidaPerdida = 1;
+            Anim.SetTrigger("Dano");
+        }
 
         if (colidiu.gameObject.tag == "CheckPoint")
         {
@@ -188,7 +194,7 @@ public class Protagonista : MonoBehaviour
         if (colidiu.gameObject.tag == "Caveira")
         {
             caveiras++;
-            GameObject.FindGameObjectWithTag("SomCaveira").GetComponent<AudioSource>().Play();
+            //GameObject.FindGameObjectWithTag("SomCaveira").GetComponent<AudioSource>().Play();
             Destroy(colidiu.gameObject);
         }
         if (colidiu.gameObject.tag == "Sangue")
@@ -206,7 +212,7 @@ public class Protagonista : MonoBehaviour
         }
         if (colidiu.gameObject.tag == "PontoVitoria")
         {
-
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<Controlador>().ProtagonistaVenceu();
         }
     }
 
@@ -238,9 +244,9 @@ public class Protagonista : MonoBehaviour
 
     public void DiminuiTransformacao()
     {
-        tempoTransformacao -= 3;
+        tempoTransformacao -= 30;
         MinhaBarraDeTransformacao.value = tempoTransformacao;
-        if (tempoTransformacao == 0)
+        if (tempoTransformacao < 0)
         {
             Anim.SetBool("Morcego", false);
             morcego = false;

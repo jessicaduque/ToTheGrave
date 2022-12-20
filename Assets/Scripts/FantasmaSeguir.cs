@@ -7,7 +7,7 @@ public class FantasmaSeguir : MonoBehaviour
 
     private Rigidbody2D Corpo;
     private Animator Anim;
-    public float velX = 1;
+    public float velX = 3;
     public float posInicial;
     public float posFinal;
     private int vida = 3;
@@ -37,12 +37,13 @@ public class FantasmaSeguir : MonoBehaviour
         else
         {
             float distancia = Vector3.Distance(transform.position, MeuHeroi.transform.position);
-            if (distancia < 8f)
+            if (distancia < 6f)
             {
                 Ataque();
             }
             else
             {
+                DesativaAtk(); 
                 contAtaque = 0;
                 Mover();
             }
@@ -103,18 +104,19 @@ public class FantasmaSeguir : MonoBehaviour
         }
         else if (contAtaque < 500)
         {
-            if(direcao == "direita")
+            AtivaAtk();
+            if (direcao == "direita")
             {
-                transform.position = Vector3.MoveTowards(transform.position, posAgoraHeroi + new Vector3(4f, 0, 0), 0.02f);
-                if (Vector3.Distance(transform.position, posAgoraHeroi + new Vector3(4f, 0, 0)) < 0.001f)
+                transform.position = Vector3.MoveTowards(transform.position, posAgoraHeroi + new Vector3(4f, 0, 0), 0.05f);
+                if (Vector3.Distance(transform.position, posAgoraHeroi + new Vector3(4f, 0, 0)) < 0.005f)
                 {
                     contAtaque = 500;
                 }
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, posAgoraHeroi - new Vector3(4f, 0, 0), 0.02f);
-                if (Vector3.Distance(transform.position, posAgoraHeroi - new Vector3(4f, 0, 0)) < 0.001f)
+                transform.position = Vector3.MoveTowards(transform.position, posAgoraHeroi - new Vector3(4f, 0, 0), 0.05f);
+                if (Vector3.Distance(transform.position, posAgoraHeroi - new Vector3(4f, 0, 0)) < 0.005f)
                 {
                     contAtaque = 500;
                 }
@@ -123,6 +125,7 @@ public class FantasmaSeguir : MonoBehaviour
         }
         else
         {
+            DesativaAtk();
             if (contAtaque > 1000)
             {
                 contAtaque = 0;

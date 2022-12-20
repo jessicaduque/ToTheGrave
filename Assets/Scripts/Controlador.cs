@@ -156,7 +156,7 @@ public class Controlador : MonoBehaviour
 
     public bool CheckInimigosMortos()
     {
-        if(qtdInimigosMortos == 11)
+        if(qtdInimigosMortos == 16)
         {
             return true;
         }
@@ -170,13 +170,13 @@ public class Controlador : MonoBehaviour
     {
         if (CheckInimigosMortos())
         {
-            if(contBossApareceuDialogo < 3000)
+            if(contBossApareceuDialogo < 500)
             {
                 contBossApareceuDialogo++;
                 caixaDialogo.gameObject.SetActive(true);
                 bossApareceu.gameObject.SetActive(true);
             }
-            else
+            else if(contBossApareceuDialogo == 500)
             {
                 caixaDialogo.gameObject.SetActive(false);
                 bossApareceu.gameObject.SetActive(false);
