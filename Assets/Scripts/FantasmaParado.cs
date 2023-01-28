@@ -43,7 +43,7 @@ public class FantasmaParado : MonoBehaviour
     public void PerdeuHP()
     {
         vida--;
-        if (vida < 0)
+        if (vida == 0)
         {
             Anim.SetBool("Morto", true);
         }
