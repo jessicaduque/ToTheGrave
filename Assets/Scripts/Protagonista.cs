@@ -162,6 +162,11 @@ public class Protagonista : MonoBehaviour
         MeuAtk.SetActive(false);
     }
 
+    public void MorrerComoMorcego()
+    {
+        Anim.SetTrigger("MorreuMorcego");
+    }
+
     private void OnTriggerStay2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "AtaqueBoss")
@@ -172,16 +177,10 @@ public class Protagonista : MonoBehaviour
         }
     }
 
-    public void MorrerComoMorcego()
-    {
-        Anim.SetTrigger("MorreuMorcego");
-    }
-
     private void OnTriggerEnter2D(Collider2D colidiu)
     {
         if (colidiu.gameObject.tag == "AtaqueInimigo")
         {
-            colidiu.gameObject.SetActive(false);
             vidaPerdida = 1;
             Anim.SetTrigger("Dano");
         }
@@ -275,7 +274,7 @@ public class Protagonista : MonoBehaviour
 
     public void NovaChance(Vector3 checkPosition)
     {
-        HP = 6;
+        HP = 10;
         MinhaBarraDeVida.value = HP;
         qtdpulos = 1;
         morcego = false;

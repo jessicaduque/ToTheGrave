@@ -126,7 +126,7 @@ public class FantasmaSeguir : MonoBehaviour
         else
         {
             DesativaAtk();
-            if (contAtaque > 1000)
+            if (contAtaque > 600)
             {
                 contAtaque = 0;
             }
